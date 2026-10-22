@@ -1,0 +1,14 @@
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5.5" y="15.5" width="3" height="5" rx="1.5" fill="url(#paint0_linear_audio_analysis)" />
+  <rect x="10" y="11.5" width="3" height="13" rx="1.5" fill="url(#paint0_linear_audio_analysis)" />
+  <rect x="14.5" y="7" width="3" height="22" rx="1.5" fill="url(#paint0_linear_audio_analysis)" />
+  <rect x="19" y="12.5" width="3" height="11" rx="1.5" fill="url(#paint0_linear_audio_analysis)" />
+  <rect x="23.5" y="16.5" width="3" height="3" rx="1.5" fill="url(#paint0_linear_audio_analysis)" />
+  <rect x="28" y="13.5" width="3" height="9" rx="1.5" fill="url(#paint0_linear_audio_analysis)" />
+  <defs>
+    <linearGradient id="paint0_linear_audio_analysis" x1="5.5" y1="7" x2="31" y2="29" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67C7FE" />
+      <stop offset="1" stop-color="#3F77D8" />
+    </linearGradient>
+  </defs>
+</svg>

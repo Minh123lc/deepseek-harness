@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Audio analysis",
+    "description": "Decode workspace audio locally: duration, waveform, tempo candidates, chunked transcription, and timed lyrics."
+  }
+}

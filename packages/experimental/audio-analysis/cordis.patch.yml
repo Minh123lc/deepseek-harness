@@ -1,0 +1,30 @@
+# Opt-in audio-analysis bundle.
+#
+# `dsh-base` already mounts `subprocess` (local), `working-directory`,
+# `fs-observation-policy` and `tools`, so this patch does not restate them: it
+# only adds the tool row and the speech rows the transcription tool needs. The
+# speech registry is deliberately opt-in in `dsh-base`, matching the
+# voice-input bundle, because it carries model-download and recording-privacy
+# policy. The local recognizer downloads nothing until a transcription asks
+# `audio_transcribe` for `prepare: true`.
+
+- insert:
+    - id: audio-analysis-tools
+      name: '@deepseek-ai/dsh-experimental-audio-analysis'
+
+    - id: speech-to-text
+      name: '@deepseek-ai/dsh-experimental-speech-to-text'
+      config:
+        defaultProvider: sensevoice-local
+
+    - id: speech-to-text-sensevoice
+      name: '@deepseek-ai/dsh-experimental-speech-to-text-sensevoice'
+      config:
+        dataRoot: !!js dshHomePath('speech-to-text', 'sensevoice')
+        # Sung vocals under a full mix sit well below the dictation default: at the stock
+        # 0.5 VAD threshold the recognizer discarded most of a real song, and at 0.2 it
+        # recovered verse and chorus lines. minSpeech/minSilence follow suit so short
+        # syllables separated by breath-sized pauses survive.
+        vadThreshold: 0.2
+        minSpeechSeconds: 0.15
+        minSilenceSeconds: 0.25

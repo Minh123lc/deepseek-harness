@@ -1,0 +1,19 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib/types"
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../../../vendor/cordis" },
+    { "path": "../../subprocess/subprocess" },
+    { "path": "../../core/tools" },
+    { "path": "../../util/values" },
+    { "path": "../../util/timeout" },
+    { "path": "../../core/agent" },
+    { "path": "../../fs/fs" },
+    { "path": "../../session/working-directory" },
+    { "path": "../../experimental/speech-to-text" }
+  ]
+}

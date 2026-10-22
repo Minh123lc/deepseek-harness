@@ -21,6 +21,10 @@
     "./src/*": "./src/*",
     "./package.json": "./package.json",
     "./locale/*.json": "./locale/*.json",
+    "./analysis": {
+      "types": "./lib/types/analysis.d.ts",
+      "default": "./lib/types/analysis.js"
+    },
     "./types": {
       "types": "./lib/types/types.d.ts",
       "default": "./lib/types/types.js"
@@ -33,6 +37,8 @@
   "files": [
     "locale/*.json",
     "lib/index.js",
+    "lib/types/analysis.js",
+    "lib/types/analysis.d.ts",
     "lib/types/**/*.js",
     "lib/types/**/*.d.ts"
   ],
